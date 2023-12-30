@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+	<head>
+			<title>Rock papaer Scissors</title>
+			<link rel="stylesheet" href="12-rock-paper-scissor.css">
+	</head>
+
+	<body>
+		<div class="vid">
+			<video autoplay loop muted>
+					<source src="sukunajjk.mp4" type="video/mp4">
+			</video>
+		</div>
+		<div class="form">
+			<div class="content">
+					<h3>
+							Rock paper Scissors
+					</h3>
+					<button  onclick="
+							player('rock');
+					" class="mov-btn">
+							<img  src="imagess/rock-emoji.png" class="move-icon">
+					</button>
+
+					<button onclick="
+							player('paper');
+					" class="mov-btn">
+					<img src="imagess/paper-emoji.png" class="move-icon">
+					</button>
+
+					<button onclick="
+							player('scissor');
+					" class="mov-btn">
+					<img src="imagess/scissors-emoji.png" class="move-icon">
+					</button>
+
+					<p class="js-move"></p>
+
+					<p class="js-result"></p>
+
+					<p class="js-score"></p>
+
+
+					<button onclick="
+							score.tie=score.loose=score.win=0;
+							localStorage.removeItem('score');
+							updatescore();
+					" class="reset-score-btn">Reset Score</button>
+
+					<button onclick="
+							autoplay();
+					" class="auto-score-btn">
+
+							Auto Play
+					</button>
+			</div>
+		</div>
+
+		<script src="12-rock-paper-scissor.js" ></script>
+	</body>
+</html>
